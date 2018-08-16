@@ -18,13 +18,8 @@ class Pokemon
   # corresponding array to our sql table.
   def self.find(id, db)
     data = db.execute("SELECT * FROM pokemon WHERE id = (?)", id).flatten
-    # pokemon_obj = self.new(id: data[0], name: data[1], type: data[2], db: db, hp: data[3])
-    # pokemon_obj
-    self.id = data[0]
-    self.name = data[1]
-    self.type = data[2]
-    self.hp = data[3]
-    self
+    pokemon_obj = self.new(id: data[0], name: data[1], type: data[2], db: db, hp: data[3])
+    pokemon_obj
   end
 
   # This function updates our hp field and updates our hp instance variable
