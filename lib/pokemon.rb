@@ -24,7 +24,7 @@ class Pokemon
     self.name = data[1]
     self.type = data[2]
     self.hp = data[3]
-    selg
+    self
   end
 
   # This function updates our hp field and updates our hp instance variable
