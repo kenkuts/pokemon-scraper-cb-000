@@ -21,6 +21,7 @@ class Pokemon
     # pokemon_obj = self.new(id: data[0], name: data[1], type: data[2], db: db, hp: data[3])
     # pokemon_obj
     self.id = data[0]
+    self.name = data[1]
   end
 
   # This function updates our hp field and updates our hp instance variable
